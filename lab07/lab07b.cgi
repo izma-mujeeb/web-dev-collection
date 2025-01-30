@@ -13,13 +13,13 @@ my $postal_code = param('postal-code');
 my $province = param('province');
 
 my $phone_number = param('phone-number');
-
 my $email = param('email');
 
 my $safe_filename_characters = "a-zA-Z0-9_.-"; 
 my $upload_dir = "/home/imujeeb/public_html/upload"; 
 my $query = new CGI; 
 my $filename = $query->param("photo"); 
+
 if ( !$filename ) { print $query->header ( ); print "There was a problem uploading your picture (try a smaller file)."; exit; } 
 my ( $name, $path, $extension ) = fileparse ( $filename, '\..*' ); 
 $filename = $name . $extension; 
@@ -38,7 +38,6 @@ print "<html><head><title>Lab 07</title></head>";
 print "<body>";
 
 print "<p style = 'text-align: center; font-size: 2rem; color: purple; font-family: verdana;'>NAME: <span style = 'color: blue'>$first_name $last_name</span></p>";
-
 print "<p style = 'text-align: center; font-size: 2rem; color: purple; font-family: verdana;'>STREET NAME: <span style = 'color: blue'>$street_name</span></p>";
 print "<p style = 'text-align: center; font-size: 2rem; color: purple; font-family: verdana;'>CITY: <span style = 'color: blue'>$city</span></p>";
 
