@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Lab07 - Perl & CGI</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    </head>
+    <body>
+        <h1 style = "text-align: center; font-size: 3rem; font-family: verdana">CPS 530 - Lab 07</h1>
+        <form action = "https://www2.cs.torontomu.ca/~imujeeb/cgi-bin/lab07b.cgi" method = "post" enctype="multipart/form-data">
+            <h2>Name:</h2>
+            Enter your first name: <input type = "text" name = "first" placeholder = "Joe"><br/><br/> 
+            Enter your last name:  <input type = "text" name = "last" placeholder = "Smith"><br/><br/> 
+            <h2>Address:</h2>
+            Enter your street name: <input type = "text" name = "street-name" placeholder = "Greenland"><br/><br/> 
+            Enter your city: <input type = "text" name = "city" placeholder = "Toronto"><br/><br/> 
+            Enter your postal code: <input type = "text" name = "postal-code" placeholder = "L0L 0L0"><br/><br/> 
+            Enter your province: <select name = "province">
+                <option value = "ontario">Ontario</option>
+                <option value = "quebec">Quebec</option>
+                <option value = "manitoba">Manitoba</option>
+                <option value = "pei">Prince Edward Island</option>
+                <option value = "alberta">Alberta</option>
+                <option value = "new-brunswick">New Brunswick</option>
+                <option value = "saskatchewan">Saskatchewan</option>
+                <option value = "british-columbia">British Columbia</option>
+                <option value = "nova-scotia">Nova Scotia</option>
+                <option value = "newfoundland">Newfoundland & Labrador</option>
+            </select><br/><br/> 
+            <h2>Phone Number:</h2>
+            Enter your phone number: <input type = "text" name = "phone-number" placeholder = "6471234567"><br/><br/> 
+            <h2>Email Address:</h2>
+            Enter your email address: <input type = "text" name = "email" placeholder = "joe.smith@gmail.com"><br/><br/> 
+            <h2>Photo:</h2>
+            Choose a photo: <input type = "file" name = "photo"><br/><br/> 
+            <input type = "submit">  
+        </form>
+    </body>
+</html>

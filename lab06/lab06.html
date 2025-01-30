@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Lab 6 - Scalable Vector Graphics (SVG)</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+    <style>
+        * {
+            font-family: verdana;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h1>Problem #1</h1> <!-- Problem #1 -->
+        <svg height = "400" width = "100%" style = "font-family: verdana; fill:black; font-size:20px;">
+            <path d = "M75 200 L165 50  L250 200 Z" fill = "yellow" stroke = "black" stroke-width = "3"/>
+            <text x="130" y="230">Triangle</text><!-- triangle -->
+            <path d = "M400 200 L400 50 L560 50 L560 200 Z" fill = "#74b9cd" stroke = "black" stroke-width = "3"></path>
+            <text x="410" y="230">Quadrilateral</text><!-- quadrilateral -->
+            <path d = "M740 200 L720 110 L800 50 L880 110 L860 200 Z" fill = "pink" stroke = "black" stroke-width = "3"></path>
+            <text x="755" y="230">Pentagon</text><!-- pentagon -->
+            <path d = "M1060 200 L990 160 L990 100 L1060 50 L1125 100 L1125 160 Z" fill = "#b2ebc1" stroke = "black" stroke-width = "3"></path>
+            <text x="1020" y="230">Hexagon</text><!-- hexagon -->
+        </svg>
+        <h1>Problem #2</h1>  <!-- Problem #2 -->
+        <svg height = "600" width = "100%" style = "font-family: verdana; font-weight: bold; font-size: 3rem; fill:black;">
+            <circle r = "145" cx = "270" cy = "150" fill = "yellow" style = "mix-blend-mode: multiply;"></circle><!-- yellow circle-->
+            <text x="250" y="100">Y</text><!-- yellow text -->
+            <circle r = "145" cx = "180" cy = "280" fill = "#ea317d" style = "mix-blend-mode: multiply;"></circle><!-- magenta circle -->
+            <text x="100" y="350">M</text><!-- magenta text -->
+            <circle r = "145" cx = "330" cy = "280" fill = "#42baeb" style = "mix-blend-mode: multiply;"></circle><!-- clear circle -->
+            <text x="350" y="350">C</text><!-- clear text -->
+        </svg>
+        <h1>Problem #3</h1> <!-- Problem #3-->
+        <svg height = "400" width = "100%">
+            <rect height = "40" width = "200" x = "10" y = "10" fill = "black"/> <!-- rectangle #1-->
+            <rect height = "40" width = "200" x = "10" y = "50" fill = "#4c4a4a"/> <!-- rectangle #2-->
+            <rect height = "40" width = "200" x = "10" y = "90" fill = "#A9A9A9"/> <!-- rectangle #3-->
+            <rect height = "40" width = "200" x = "10" y = "130" fill = "#E5E4E2"/> <!-- rectangle #4-->
+        </svg>
+    </body>
+</html>

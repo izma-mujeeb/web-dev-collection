@@ -1,0 +1,41 @@
+* {
+    background-color: lightblue;
+    font-family: verdana;
+}
+h1, h2, h3 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 1.5rem;
+    color: blue;
+}
+h3 {
+    color: purple;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+#secured p, #unsecured p {
+    text-align: center;
+    font-size: 1.3rem;
+}
+img {
+    height: 30px;
+    width: 30px;
+}
+
+#valid {
+    color: green;
+}
+#not-valid {
+    color: red;
+}
+#button-1 {
+    display: block;
+    margin: auto; 
+}
+#palindrome {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Lab 4 - JavaScript</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    </head>
+    <body>
+        <h1>Lab 4 - JavaScript</h1>
+        <h2>Problem #1</h2>
+        <button type = "button" onClick = "bookmarks()" id = "button-1">Click here to see the bookmarks!</button>
+        <div id = "secured">
+            <h3>Secured Bookmarks</h3>
+        </div>
+        <div id = "unsecured">
+            <h3>Unsecured Bookmarks</h3>
+        </div><br/><br/> 
+        <h2>Problem #2</h2>
+        <div id = "palindrome">
+            <label for="palindrome">Enter a word</label>
+            <input type = "text" name = "palindrome" id = "word">
+            <button type = "button" id = "palindrome-button" onClick = "palindrome()">Check!</button>
+        </div>
+    </body>
+    <script>
+        function bookmarks() { /* this function is used for problem #1 */
+            let bookmarksList = ["http://facebook.com", "https://facebook.com", "http://youtube.com", "https://youtube.com", "http://twitter.com"]; 
+            for (let bookmark of bookmarksList) {
+                const element = document.createElement("p");
+                const img = document.createElement("img"); 
+                const text = document.createTextNode(bookmark);
+                element.append(text);
+                if (bookmark.startsWith("https")) {
+                    document.getElementById("secured").appendChild(element); 
+                    img.src = "images/secured.png"; 
+                } else {
+                    document.getElementById("unsecured").appendChild(element); 
+                    img.src = "images/unsecured.png";
+                }
+                element.appendChild(img);  
+            }
+        }
+        function palindrome() { /* this function is used for problem #2 */
+            const div = document.getElementById("palindrome");
+            const button = document.getElementById("palindrome-button");
+            const word = document.getElementById("word");
+            const element = document.createElement("p");
+            let text = null;  
+            if (remove(word.value)) {
+                text = document.createTextNode(word.value);
+                element.id = "valid"
+            } else {
+                text = document.createTextNode(word.value);
+                element.id = "not-valid"
+            }
+            element.appendChild(text);
+            div.appendChild(element); 
+            word.value = ""; 
+        }
+        function remove(word) { /* this function is a helper function for problem #2 - it get rids of all punctuation/spaces and returns true if a word is a palindrome, otherwise false*/
+            word = word.toLowerCase().replace(/[!"#$%&'’()*+,-./:;<=>?@[\]^_`{|}~]/g, '').replace(/ /g, ""); 
+            let left = 0; let right = word.length - 1; 
+            while (left <= right) {
+                if (word[left] !== word[right]) {
+                    return false;
+                }
+                left += 1
+                right -= 1
+            } 
+            return true; 
+        } 
+    </script>
+</html>

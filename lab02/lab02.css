@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Teko:wght@300..700&display=swap'); /* custom font - google fonts */ 
+* {
+    margin: 0;
+    animation-name: background; /* animated item being used */
+    animation-duration: 10s;
+    background-color: rgb(193, 229, 229);
+}
+.name { /* class */
+    background-color: purple;
+    color: white;
+    font-family: "Teko", sans-serif;
+    text-align: center;
+    padding: 50px;
+    font-size: 2.5rem;
+}
+.navigation {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.navigation a {
+    text-decoration: none;
+    color: purple;
+    font-family: verdana;
+    background-color: aqua;
+    padding: 10px 40px;
+}
+.navigation a:hover { /* hover effect */
+    background-color: purple;
+    color: aqua;
+}
+.navigation a:visited { /* pseudo-class */
+    color: black; 
+}
+.navigation a:active {
+    color: white; /* pseudo-class */
+}
+.intro, .future-info, .career-info {
+    text-align: center;
+    margin-top: 20px;
+    font-family: verdana;
+    color: purple;
+}
+.about-header, .hobbies-header, .future-header, .career-header {
+    text-align: center;
+    font-family: verdana;
+    font-size: 2rem;
+}
+.about { /* flex-box layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: 90%; /* box-model layout */
+    padding: 10px;
+    border: 3px black solid;
+    margin: 50px;
+    border-radius: 5px;
+}
+img {
+    height: 450px;
+    width: 500px;
+    opacity: 0.7; /* opacity property */
+}
+.about-paragraph, figcaption {
+    color: purple;
+    font-family: verdana;
+    font-size: 1.5rem;
+}
+.about-paragraph::first-letter{ /* pseudo-element */
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+figcaption {
+    text-align: center;
+}
+.hobbies-info {
+    color: purple;
+    font-family: verdana;
+    text-align: center;
+    width: 90%; /* box-model layout */
+    padding: 10px;
+    border: 3px black solid;
+    margin: 50px;
+    border-radius: 5px;
+}
+.future-info, .career-info {
+    width: 90%; /* box-model layout */
+    padding: 20px;
+    border: 3px black solid;
+    margin: 50px;
+    border-radius: 5px;
+}
+.hobbies-info > ul, .career-info{ /* CSS Combinator - child selector */
+    list-style-position: inside; 
+}
+.career-info:first-child {
+    color: pink; 
+}
+.hobbies-info ul li, .career-info li { /* CSS Combinator - descendent selector */
+    display: inline; /* display property */
+    margin-right: 10px;
+}
+.auto-img {
+    height: 50px;
+    width: 50px;
+    visibility: hidden; /* visibility property */ 
+}
+.footer {
+    text-align: center;
+    color: black;
+    font-family: verdana;
+    font-size: 1rem;
+}
+@keyframes background { /* animated item */
+    from {background-color: purple;}
+    to {background-color: rgb(193, 229, 229);}
+}

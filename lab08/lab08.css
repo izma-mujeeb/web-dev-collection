@@ -1,0 +1,17 @@
+#black {
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+}
+#white {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+td {
+    background-color: purple;
+    color: white;
+}
+#img {
+    text-align: right;
+}

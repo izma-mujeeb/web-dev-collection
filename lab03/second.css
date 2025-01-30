@@ -1,0 +1,14 @@
+* {
+    background-color: rgb(205, 126, 126);
+    font-family: monospace;
+}
+#title {
+    text-shadow: 2px 2px black;
+}
+#location {
+    text-align: center;
+}
+#location, #climate, #geography, #religion, #population, #politics {
+    background-color: white;
+    border: 2px black solid;
+}
